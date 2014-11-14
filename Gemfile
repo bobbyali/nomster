@@ -52,3 +52,5 @@ gem 'will_paginate', '~> 3.0.5'
 
 gem 'simple_form'
 
+gem 'devise', '>= 3.2.4'
+
