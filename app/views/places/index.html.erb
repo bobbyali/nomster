@@ -1,1 +1,9 @@
-<h1>Welcome to Nomster clone</h1>
+<% @places.each do |place| %>
+  <div>
+    <h1><%= place.name %></h1>
+    <i><%= place.address %></h1><br />
+      <p><%= place.description %></p><br />
+  </div>
+  <hr />
+
+<% end %>
