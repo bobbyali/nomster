@@ -59,3 +59,5 @@ gem 'rails_12factor'
 gem 'geocoder'
 
 gem 'figaro', '>= 1.0.0'
+
+gem 'carrierwave'
