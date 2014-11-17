@@ -55,3 +55,7 @@ gem 'simple_form'
 gem 'devise', '>= 3.2.4'
 
 gem 'rails_12factor'
+
+gem 'geocoder'
+
+gem 'figaro', '>= 1.0.0'
