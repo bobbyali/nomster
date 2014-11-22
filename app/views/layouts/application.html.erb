@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, :class => 'logo' do %>
-      <%= image_tag "logo.png" %>
+      <%= image_tag "logo_1.png" %>
       <% end %>
     </div>
 
@@ -27,9 +27,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">        
         <li>
-          <%= link_to new_place_path do %>            
-            <div class="add"></div>                      
-          <% end %>
+          <%= link_to "Add a new place", new_place_path %>            
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
