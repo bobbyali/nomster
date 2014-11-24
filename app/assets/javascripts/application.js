@@ -13,4 +13,9 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require fancybox
 //= require_tree .
+
+jQuery(function() {
+  $("a#single_image").fancybox();
+});
