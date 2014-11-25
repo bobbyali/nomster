@@ -89,7 +89,7 @@ html, body, #wrapper{
 #indexbox {
   position: absolute; 
   top: 100px; 
-  left: 50px; 
+  left: 0px; 
   z-index: 99;
   background-color: #ffffff;
   padding: 10px;
@@ -101,3 +101,9 @@ html, body, #wrapper{
   border-radius: 10px;
 }
 
+/* === MOBILE-SPECIFIC STYLES === */
+@media (max-width: 750px) {
+  #indexbox {
+    font-size: 12px;
+  }
+}
