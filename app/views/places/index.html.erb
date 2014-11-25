@@ -1,21 +1,11 @@
-<div class="booyah-box">
-  <div class="col-sm-6">
+<div id="map"></div>
+
+<div id="indexbox">
   <p>In 2014, a street-savvy 2 year old boy named Adam and his uber-cool daddy (yours truly) embarked on an ambitious quest to find and catalog every cool kids attraction in London. After 4 months, we're starting to realise that this could take a while, so we've set up this site so that other parents can help us out! </p>
   <p>Below is a map of all the fun kid-friendly places that we've visited, or would like to visit, throughout London. Hopefully this will be helpful if you're living in London and are trying to find something fun to do near you. We'd love your contributions too, so please feel free to <%= link_to "sign up", new_user_registration_path %> and add your own recommendations! (<a href="http://adamand.me/about">More about Adam and me.</a>)</p>
-  </div>
-  <div class="col-md-2 col-sm-3 hidden-xs">
-    <%= link_to image_tag('adam_bus_sm.jpg', :size => '125'), image_url('adam_bus.jpg'), :id => 'single_image' %>     
-  </div>
-  <div class="col-md-2 col-sm-3 hidden-xs">
-    <%= link_to image_tag('adam_tube_sm.jpg', :size => '125'), image_url('adam_tube.jpg'), :id => 'single_image' %>
-  </div>
-  <div class="col-md-2 hidden-sm hidden-xs">
-    <%= link_to image_tag('adam_bench_sm.jpg', :size => '125'), image_url('adam_bench.jpg'), :id => 'single_image' %>
-  </div>
-  <br/>
-  <br class="clear"/>
-  <div id="map" style="width: 100%; height: 400px;"></div>
 </div>
+
+
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script type="text/javascript">
