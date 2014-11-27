@@ -103,7 +103,9 @@ html, body, #wrapper{
 
 /* === MOBILE-SPECIFIC STYLES === */
 @media (max-width: 750px) {
-  #indexbox {
-    font-size: 12px;
+  #indexbox {    
+    top: 20px;    
+    position: relative;    
+    padding: 10px 10px 0px 10px;    
   }
 }
