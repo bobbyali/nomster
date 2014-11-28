@@ -19,3 +19,11 @@
 jQuery(function() {
   $("a#single_image").fancybox();
 });
+
+// With the element initially shown, we can hide it slowly:
+$(document).ready(function(){
+	$( "#map" ).click(function() {
+	  $( "#indexbox" ).hide( "slow", function() {	    
+	  });
+	});
+});
