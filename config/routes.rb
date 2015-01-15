@@ -11,6 +11,7 @@ Nomster::Application.routes.draw do
   resources :users, :only => :show
 
   get 'about', :to => 'places#about'
+  get 'all', :to => 'places#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
