@@ -1,8 +1,17 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :destroy, :update]
+  #before_action :authenticate_user!, :only => [:new, :create, :edit, :destroy, :update]
 
   def index
     @places = Place.all
+
+    respond_to do |format|      
+      format.html do 
+      end
+
+      format.json do 
+        render :json => @places
+      end
+    end
     #@places = Place.paginate(:page => params[:page], :per_page => 5)
   end
 
@@ -14,18 +23,47 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = current_user.places.create(place_params)
-    if @place.valid?
-      redirect_to root_path
-    else
-      render :new, :status => :unprocessable_entity
+    #@place = current_user.places.create(place_params)
+    @place = Place.create(place_params)
+
+    respond_to do |format|
+      format.html do 
+        if @place.valid?
+          redirect_to root_path
+        else
+          render :new, :status => :unprocessable_entity
+        end
+      end
+
+      format.json do 
+        if @place.valid?
+          render :json => @place
+        else
+          render :json => @place, :status => :unprocessable_entity
+        end  
+      end
     end
+
+
   end
 
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
     @photo = Photo.new
+
+
+    respond_to do |format|      
+      format.html do 
+      end
+            
+      format.json do 
+        if @place.valid? 
+          render :json => @place
+        end
+      end
+    end
+     
   end
 
   def edit
